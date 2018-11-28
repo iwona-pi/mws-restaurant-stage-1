@@ -10,7 +10,8 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+	position: relative;
+ /* min-width: 370px;*/
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -38,6 +39,8 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  padding-right: 0px;
+  width: 100%;
 }
 #footer {
   background-color: #444;
@@ -66,12 +69,12 @@ nav h1 a {
   text-transform: uppercase;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
+    padding: 10px 60px 16px;
     list-style: none;
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: fit-content;
 }
 
 /* Display list items side by side */
@@ -184,7 +187,7 @@ nav h1 a {
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -204,8 +207,8 @@ nav h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 50%;
+  position: relative;
+  /*width: 100%;*/
 }
 #restaurant-name {
   color: #f18200;
@@ -239,11 +242,11 @@ nav h1 a {
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 1000px 40px 30px;
-  width: 50%;
+  padding: 1030px 40px 30px;
+  /*width: 80.2%;*/
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  padding: 30px 40px 80px 33px;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -272,13 +275,25 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+  font-size: 1.1em;
 }
 
 .grid-container {
   display: grid;
 }
 
-.grid2 {
+/* ss.grid2 {
   height: 20%;
   padding-top: 1000px;
+} */
+
+/*responsive*/
+@media only screen and (max-width: 320px) {
+  .inside #map-container {
+    height: 27%;
+  }
+
+  #restaurant-hours td {
+    font-size: small;
+  }
 }
