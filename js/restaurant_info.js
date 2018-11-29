@@ -1,4 +1,4 @@
-let restaurant;
+ let restaurant;
 var newMap;
 
 /**
@@ -149,14 +149,19 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
 createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('p');
+  name.classList.add("name");
   name.innerHTML = review.name;
   li.appendChild(name);
 
   const date = document.createElement('p');
+  date.classList.add("date");
+  var line = document.createElement('br');
   date.innerHTML = review.date;
   li.appendChild(date);
-
+  li.appendChild(line);
+ 
   const rating = document.createElement('p');
+  rating.classList.add("rating");
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
