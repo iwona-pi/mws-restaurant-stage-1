@@ -87,6 +87,7 @@ initMap = () => {
   }).addTo(newMap);
 
   updateRestaurants();
+  tabIndex();
 }
 /* window.initMap = () => {
   let loc = {
@@ -204,7 +205,10 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } 
 
-
+function tabIndex() {
+var c = document.getElementById("map");
+ c.tabIndex = -1;
+}
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
