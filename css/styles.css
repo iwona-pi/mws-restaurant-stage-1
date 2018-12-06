@@ -23,7 +23,7 @@ a {
 	text-decoration: none;
 }
 a:hover, a:focus {
-	color: #3397db;
+	color: #116a95;
 	text-decoration: none;
 }
 a img{
@@ -36,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
@@ -167,7 +168,7 @@ tr>*:first-child {
   display: block;
   margin: 0;
   max-width: 235px;
-  padding-top: 20px;
+  padding-top: 20px;  
   /*min-height: 248px;*/
   min-width: 100%;
   max-height: 100%;
@@ -303,16 +304,10 @@ tr>*:first-child {
   color: #666;
   font-size: 1.1em;
 }
-
-.grid-container {
-  display: grid;
+.leaflet-container a {
+    color: #116a95;
 }
 
-
-/* ss.grid2 {
-  height: 20%;
-  padding-top: 1000px;
-} */
 
 /*responsive*/
 @media only screen and (max-width: 320px) {
